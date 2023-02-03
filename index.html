@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Refactoring UI</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- hand written -->
+        <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+        <!-- serif -->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- sans serif -->
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- roboto -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="paper">
+            <div id="pattern">
+                <h1>Refactoring UI Book Summary</h1>
+                <p class="notebook-text">This website was created after reading the inspiring <a href="https://www.refactoringui.com/">Refactoring UI</a> book and feeling motivated to experiment with the different tools this books gives.<br>
+                    In each component you can switch between different versions and hover over the tooltips to get more information.
+                </p>
+                <h2 class="title">Personality</h2>
+                <p class="notebook-text">Design can have a specific tone of voice with a personality, which should be consistent with the message the product is aiming to convey and the audience it want's to convey it to.</p>
+                <div class="show-info-tooltips-checkbox">
+                    <input type="checkbox" class="show-tooltip-checkbox">
+                    <label class="show-tooltip-label">Show information tooltips</label>
+                </div>
+                <div class="toggle position-right">
+                    <div class="toggle-value toggle-value-left toggle-value-active">Serious</div>
+                    <div class="toggle-value toggle-value-right">Fun</div>
+                </div>
+                <div class="hero-section hero-section-top-color-serious">
+                    <div class="tooltip top-middle">
+                        <div class="tooltip-content hero-color-tooltip">Blue is a safe and familiar choice for primary color</div>
+                         <div class="tooltip-icon tooltip-name-hero-color"></div>
+                    </div>
+                    <div class="hero-content">
+                        <div class="hero-icon-container">
+                            <div class="hero-icon"></div>
+                            <div class="hero-icon-name">City Bank</div>
+                        </div>
+                        <div class="tooltip-container">
+                            <div class="tooltip top-right">
+                                <div class="tooltip-content hero-title-tooltip">Serif font family looks classic and elegant</div>
+                                <div class="tooltip-icon tooltip-name-hero-title"></div>
+                            </div>
+                            <h2 class="hero-title">Saving made simple</h2>
+                        </div>
+                        <div class="tooltip-container">
+                            <div class="tooltip bottom-left">
+                                <div class="tooltip-content hero-text-tooltip">Using a less personal tone might feel more official or professional</div>
+                                <div class="tooltip-icon tooltip-name-hero-text"></div>
+                            </div>
+                            <p class="hero-text">Explore our insurance, banking and retirement solutions</p>
+                        </div>
+                        <div class="medium-separator"></div>
+                        <div class="tooltip-container">
+                            <div class="tooltip top-right">
+                                <div class="tooltip-content hero-button-tooltip">Button without any border radius looks more serious and formal</div>
+                                <div class="tooltip-icon tooltip-name-hero-button"></div>
+                            </div>
+                            <button class="hero-button serious-hero-button">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="tooltip right">
+                            <div class="tooltip-content hero-image-tooltip">Real image is more classic and can easily convey a certain feeling</div>
+                            <div class="tooltip-icon tooltip-name-hero-image"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

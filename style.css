@@ -1,0 +1,338 @@
+/*********************************************  design system *********************************************/
+
+:root {
+    --grey-900: #21252b;
+    --grey-800: #343a40;
+    --grey-700: #495057;
+    --grey-600: #858e96;
+    --grey-500: #acb5bd;
+    --grey-400: #ced4da;
+    --grey-300: #dee2e6;
+    --grey-200: #f1f3f5;
+    --grey-100: #f8f9fa;
+    --blue-700: #12283a;
+    --blue-600: #1a4971;
+    --blue-500: #2268a2;
+    --blue-400: #3083c7;
+    --blue-300: #62a2d8;
+    --blue-200: #a9d4f5;
+    --blue-100: #eff8ff;
+    --green-700: #114544;
+    --green-600: #1b645e;
+    --green-500: #299187;
+    --green-400: #3baea3;
+    --green-300: #6ed7d3;
+    --green-200: #a8eeeb;
+    --green-100: #e6fffe;
+    --red-700: #601818;
+    --red-600: #881b1b;
+    --red-500: #b72020;
+    --red-400: #db3130;
+    --red-300: #e26564;
+    --red-200: #f4a9a9;
+    --red-100: #fbe7e7;
+    --yellow-700: #5c4813;
+    --yellow-600: #8c6d20;
+    --yellow-500: #caa53d;
+    --yellow-400: #f4ca64;
+    --yellow-300: #fae29f;
+    --yellow-200: #fdf3d7;
+    --yellow-100: #fffcf4;
+    --pink-900: #99003d;
+    --pink-800: #b30047;
+    --pink-700: #cc0052;
+    --pink-600: #e6005c;
+    --pink-500: #ff0066;
+    --pink-400: #ff1a75;
+    --pink-300: #ff4d94;
+    --pink-200: #ff80b3;
+    --pink-100: #ffcce0;
+    --background: #f5f7fa;
+    --text-normal: 18px;
+    --text-md: 20px;
+    --text-lg: 22px;
+    --text-xl: 24px;
+    --text-sm: 16px;
+    --text-xs: 14px;
+    --box-shadow-md: 0px 0px 5px 0px var(--grey-300);
+    --box-shadow-lg: 0px 0px 5px 0px var(--grey-400);
+    --padding-xs: 4px;
+    --padding-sm: 6px;
+    --padding-normal: 8px;
+    --padding-md: 12px;
+    --padding-lg: 16px;
+    --padding-xl: 20px;
+    --border-radius-sm: 5px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 10px;
+    --border-radius-2xl: 20px;
+    --font-weight-md: 500;
+    --font-weight-lg: 600;
+    --font-weight-xl: 700;
+    --margin-sm: 6px;
+    --margin-normal: 8px;
+    --margin-md: 12px;
+    --margin-lg: 16px;
+    --margin-xl: 20px;
+    --margin-2xl: 32px;
+    --size-sm: 6px;
+    --size-normal: 8px;
+    --size-medium: 10px;
+    --size-large: 12px;
+    --size-xl: 32px;
+    --size-2xl: 42px;
+}
+
+/*********************************************************************************************************/
+
+* {
+    padding: 0;
+    margin: 0;
+    color: var(--grey-900)
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Livvic', sans-serif;
+}
+
+.notebook-text {
+    line-height: 42px;
+}
+
+a {
+    text-decoration: none;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(154, 216, 215, 1) 60%,
+        rgba(154, 216, 215, 1) 100%
+      );
+    border-radius: var(--border-radius-md);
+}
+
+#paper {
+    width: 1000px;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 140px;
+    background-color: white;
+    box-shadow: var(--box-shadow-lg);
+}
+
+#pattern {
+    height: 100vh;
+    padding: 0px 32px 12px 32px;
+    background-image: repeating-linear-gradient(white 0px, white 40px, rgb(208, 208, 208) 41px);
+}
+
+.title {
+    margin: 92px 0 8px 0;
+}
+
+.toggle {
+    border: 1px solid var(--grey-600);
+    width: fit-content;
+    color: var(--grey-600);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    background-color: white;
+}
+
+.toggle-value {
+    padding: var(--padding-md);
+    cursor: pointer;
+}
+
+.toggle-value-left {
+    border-right: 1px solid var(--grey-600);
+    height: 100%;
+    border-top-left-radius: var(--border-radius-md);
+    border-bottom-left-radius: var(--border-radius-md);
+}
+
+.toggle-value-right  {
+    border-top-right-radius: var(--border-radius-md);
+    border-bottom-right-radius: var(--border-radius-md);
+}
+
+.toggle-value-active {
+    background-color: var(--grey-300);
+    font-weight: var(--font-weight-lg);
+}
+
+.position-right {
+    position: relative;
+    float: right;
+    right: var(--padding-xl);
+    bottom: 25px;
+}
+
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tooltip-icon {
+    width: 15px;
+    height: 15px;
+    background-image: url("./info-tooltip-blue.png");
+    background-size: contain;
+    cursor: pointer;
+    display: none;
+}
+
+.top-right {
+   position: absolute;
+   top: -12px;
+   right: -20px;
+}
+
+.right {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.bottom-left {
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+}
+
+.top-middle {
+    position: absolute;
+    top: 5px;
+    left: 220px;
+}
+
+.tooltip-content {
+    background-color: var(--blue-600);
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--margin-sm);
+    display: none;
+    position: absolute;
+    bottom: 12px;
+    font-size: small;
+    color: white;
+    width: 200px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.medium-separator {
+    height: var(--size-2xl);
+}
+
+.show-info-tooltips-checkbox {
+    margin-top: var(--size-2xl);
+    display: flex;
+    align-items: center;
+}
+
+.show-tooltip-label {
+    margin-left: var(--margin-sm);
+}
+
+/********************************************* personality *********************************************************/
+
+.hero-section {
+    width: 90%;
+    margin: auto;
+    height: 400px;
+    box-shadow: var(--box-shadow-lg);
+    background-color: white;
+    display: flex;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+.hero-section-top-color-serious {
+    border-top: 6px solid var(--blue-500);
+}
+
+.hero-section-top-color-fun {
+    border-top: 6px solid var(--pink-400);
+}
+
+.hero-content {
+    flex-grow: 1;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--padding-lg);
+    text-align: center;
+}
+
+.hero-icon-container {
+    position: absolute;
+    top: var(--size-medium);
+    left: var(--size-medium);
+    display: flex;
+    align-items: center;
+}
+
+.hero-icon {
+    background-image: url("./personality-serious-icon.png");
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-right: var(--margin-md);
+}
+
+.hero-icon-name {
+    font-size: medium;
+    font-weight: var(--font-weight-md);
+}
+
+.hero-image {
+    flex-grow: 2;
+    background-image: url("./personality-serious.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.hero-title {
+    margin-bottom: var(--margin-md);
+    color: var(--blue-700)
+}
+
+.hero-text {
+    color: var(--grey-700);
+}
+
+.hero-button {
+    padding: var(--padding-md) var(--padding-lg);
+    width: 130px;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.serious-hero-button {
+    background-color: var(--blue-500);
+}
+
+.fun-hero-button {
+    background-color: var(--pink-400);
+    border-radius: var(--border-radius-2xl);
+}
+
+.hero-button:hover {
+    opacity: 0.8;
+}
