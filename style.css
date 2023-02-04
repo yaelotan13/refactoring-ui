@@ -48,12 +48,13 @@
     --pink-200: #ff80b3;
     --pink-100: #ffcce0;
     --background: #f5f7fa;
-    --text-normal: 18px;
+    --text-mds: 18px;
     --text-md: 20px;
     --text-lg: 22px;
     --text-xl: 24px;
-    --text-sm: 16px;
-    --text-xs: 14px;
+    --text-normal: 16px;
+    --text-sm: 14px;
+    --text-xs: 13px;
     --box-shadow-md: 0px 0px 5px 0px var(--grey-300);
     --box-shadow-lg: 0px 0px 5px 0px var(--grey-400);
     --padding-xs: 4px;
@@ -66,9 +67,14 @@
     --border-radius-md: 8px;
     --border-radius-lg: 10px;
     --border-radius-2xl: 20px;
+    --font-weight-thin: 300;
+    --font-weight-normal: 400;
     --font-weight-md: 500;
     --font-weight-lg: 600;
     --font-weight-xl: 700;
+    --margin-xxxs: 1px;
+    --margin-xxs: 2px;
+    --margin-xs: 4px;
     --margin-sm: 6px;
     --margin-normal: 8px;
     --margin-md: 12px;
@@ -81,6 +87,7 @@
     --size-large: 12px;
     --size-xl: 32px;
     --size-2xl: 42px;
+    --size-3xl: 62px;
 }
 
 /*********************************************************************************************************/
@@ -125,13 +132,12 @@ a {
 }
 
 #pattern {
-    height: 100vh;
     padding: 0px 32px 12px 32px;
     background-image: repeating-linear-gradient(white 0px, white 40px, rgb(208, 208, 208) 41px);
 }
 
 .title {
-    margin: 92px 0 8px 0;
+    margin: 50px 0 8px 0;
 }
 
 .toggle {
@@ -247,15 +253,18 @@ a {
 
 /********************************************* personality *********************************************************/
 
-.hero-section {
-    width: 90%;
-    margin: auto;
-    height: 400px;
+.section {
     box-shadow: var(--box-shadow-lg);
+    margin: auto;
     background-color: white;
     display: flex;
-    font-family: 'Playfair Display', serif;
     position: relative;
+}
+
+.hero-section {
+    width: 90%;
+    height: 400px;
+    font-family: 'Playfair Display', serif;
 }
 
 .hero-section-top-color-serious {
@@ -335,4 +344,122 @@ a {
 
 .hero-button:hover {
     opacity: 0.8;
+}
+
+
+/******************************************   Hierarchy    *********************************************/
+
+.hierarchy-section {
+    width: 70%;
+    height: 260px;
+    font-family: 'Rubik', sans-serif;
+    margin: auto;
+    margin-top: var(--size-3xl) ;
+}
+
+.hierarchy-image {
+    width: 33%;
+    height: 100%;
+    background-image: url("./jaffa.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hierarchy-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hierarchy-upper-info {
+    height: 50%;
+    padding: var(--padding-lg);
+}
+
+.hierarchy-title {
+    margin-bottom: var(--margin-md);
+}
+
+.hierarchy-good-title {
+    font-weight: var(--font-weight-lg);
+    font-size: var(--text-lg);
+}
+
+.hierarchy-text-good {
+    color: var(--grey-700);
+    font-weight: var(--font-weight-thin);
+}
+
+.hierarchy-bottom-info {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--background);
+    padding: var(--padding-lg);
+}
+
+.hierarchy-price-container {
+    margin-bottom: var(--margin-sm);
+}
+
+.hierarchy-price-good {
+    font-weight: var(--font-weight-lg);
+    font-size: var(--text-mds);
+}
+
+.hierarchy-text-good-small {
+    color: var(--grey-700);
+    font-weight: var(--font-weight-thin);
+    font-size: var(--text-sm);
+}
+
+.hierarchy-bad {
+    font-weight: var(--font-weight-normal);
+    font-size: var(--text-normal);
+    color: var(--grey-900);
+}
+
+.hierarchy-horizontal-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hierarchy-cta {
+    width: 120px;
+    height: 40px;
+    border-radius: var(--border-radius-lg);
+    border: none;
+    background-color: var(--blue-500);
+    color: white;
+    cursor: pointer;
+}
+
+.hierarchy-cta-bad {
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-normal);
+}
+
+.hierarchy-cta-good {
+    font-weight: var(--font-weight-lg);
+}
+
+.hierarchy-cta:hover {
+    opacity: 0.9;
+}
+
+.hierarchy-star {
+    margin-right: var(--margin-xxxs);
+}
+
+.hierarchy-star:last-child {
+    margin-right: var(--margin-sm);
+}
+
+.hierarchy-read-more {
+    text-decoration: underline;
+    color: var(--blue-600);
+    margin-left: var(--margin-xs);
 }

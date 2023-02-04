@@ -1,7 +1,7 @@
-document.querySelector(".toggle-value-left").addEventListener("click", () => {
+document.querySelector(".hero-value-left").addEventListener("click", () => {
     // toggle
-    document.querySelector(".toggle-value-right").classList.remove("toggle-value-active");
-    document.querySelector(".toggle-value-left").classList.add("toggle-value-active");
+    document.querySelector(".hero-value-right").classList.remove("toggle-value-active");
+    document.querySelector(".hero-value-left").classList.add("toggle-value-active");
 
     // container
     document.querySelector(".hero-section").classList.add("hero-section-top-color-serious");
@@ -32,10 +32,10 @@ document.querySelector(".toggle-value-left").addEventListener("click", () => {
     document.querySelector(".hero-color-tooltip").innerHTML = "Blue is a safe and familiar choice for primary color";
 });
 
-document.querySelector(".toggle-value-right").addEventListener("click", () => {
+document.querySelector(".hero-value-right").addEventListener("click", () => {
     // toggle
-    document.querySelector(".toggle-value-left").classList.remove("toggle-value-active");
-    document.querySelector(".toggle-value-right").classList.add("toggle-value-active");
+    document.querySelector(".hero-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".hero-value-right").classList.add("toggle-value-active");
 
     // container
     document.querySelector(".hero-section").classList.add("hero-section-top-color-fun");
@@ -90,4 +90,72 @@ document.querySelector(".show-tooltip-checkbox").addEventListener("change", (e) 
     document.querySelectorAll(".tooltip-icon").forEach(element => {
         element.style.display = e.target.checked ? "block" : "none";
     })
-})
+});
+
+document.querySelector(".hierarchy-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".hierarchy-value-right").classList.remove("toggle-value-active");
+    document.querySelector(".hierarchy-value-left").classList.add("toggle-value-active");
+
+    // title
+    document.querySelector(".hierarchy-title").classList.remove("hierarchy-good-title");
+    document.querySelector(".hierarchy-title").classList.add("hierarchy-bad");
+
+    // text
+    document.querySelector(".hierarchy-text").classList.remove("hierarchy-text-good");
+    document.querySelector(".hierarchy-text").classList.add("hierarchy-bad");
+
+    // price number
+    document.querySelector(".hierarchy-price").classList.remove("hierarchy-price-good");
+    document.querySelector(".hierarchy-price").classList.add("hierarchy-bad");
+
+    // price label
+    document.querySelector(".hierarchy-price-label").classList.remove("hierarchy-price-good");
+    document.querySelector(".hierarchy-price-label").classList.add("hierarchy-bad");
+
+    // review text
+    document.querySelector(".hierarchy-review-text").classList.remove("hierarchy-text-good-small");
+    document.querySelector(".hierarchy-review-text").classList.add("hierarchy-bad");
+
+    // recommendation
+    document.querySelector(".hierarchy-recommendation").classList.remove("hierarchy-text-good");
+    document.querySelector(".hierarchy-recommendation").classList.add("hierarchy-bad");
+
+    // book now button
+    document.querySelector(".hierarchy-cta").classList.remove("hierarchy-cta-good");
+    document.querySelector(".hierarchy-cta").classList.add("hierarchy-cta-bad");
+});
+
+document.querySelector(".hierarchy-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".hierarchy-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".hierarchy-value-right").classList.add("toggle-value-active");
+
+    // title
+    document.querySelector(".hierarchy-title").classList.add("hierarchy-good-title");
+    document.querySelector(".hierarchy-title").classList.remove("hierarchy-bad");
+
+    // text
+    document.querySelector(".hierarchy-text").classList.remove("hierarchy-bad");
+    document.querySelector(".hierarchy-text").classList.add("hierarchy-text-good");
+
+    // price number
+    document.querySelector(".hierarchy-price").classList.remove("hierarchy-bad");
+    document.querySelector(".hierarchy-price").classList.add("hierarchy-price-good");
+
+    // text
+    document.querySelector(".hierarchy-price-label").classList.remove("hierarchy-bad");
+    document.querySelector(".hierarchy-price-label").classList.add("hierarchy-text-good");
+
+    // review text
+    document.querySelector(".hierarchy-review-text").classList.remove("hierarchy-bad");
+    document.querySelector(".hierarchy-review-text").classList.add("hierarchy-text-good-small");
+
+    // recommendation
+    document.querySelector(".hierarchy-recommendation").classList.remove("hierarchy-bad");
+    document.querySelector(".hierarchy-recommendation").classList.add("hierarchy-text-good-small");
+
+    // book now button
+    document.querySelector(".hierarchy-cta").classList.remove("hierarchy-cta-bad");
+    document.querySelector(".hierarchy-cta").classList.add("hierarchy-cta-good");
+});
