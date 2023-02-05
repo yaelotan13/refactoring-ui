@@ -190,3 +190,25 @@ document.querySelector(".labels-person-value-right").addEventListener("click", (
     document.querySelector(".labels-section-person-card-email-value").classList.add("labels-section-person-card-email-value-good");
     document.querySelector(".labels-section-person-card-phone-value").classList.add("labels-section-person-card-phone-value-good");
 });
+
+document.querySelector(".labels-product-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".labels-product-value-right").classList.remove("toggle-value-active");
+    document.querySelector(".labels-product-value-left").classList.add("toggle-value-active");
+
+    document.querySelector(".labels-section-product-card-stock-container-good").classList.add("hide");
+    document.querySelector(".labels-section-product-card-stock-container-good").classList.remove("display-inline");
+    document.querySelector(".labels-section-product-card-stock-container-bad").classList.remove("hide");
+    document.querySelector(".labels-section-product-card-stock-container-bad").classList.add("display-block");
+});
+
+document.querySelector(".labels-product-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".labels-product-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".labels-product-value-right").classList.add("toggle-value-active");
+
+    document.querySelector(".labels-section-product-card-stock-container-bad").classList.add("hide");
+    document.querySelector(".labels-section-product-card-stock-container-bad").classList.remove("display-block");
+    document.querySelector(".labels-section-product-card-stock-container-good").classList.remove("hide");
+    document.querySelector(".labels-section-product-card-stock-container-good").classList.add("display-inline");
+});
