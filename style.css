@@ -4,6 +4,7 @@
     --grey-900: #21252b;
     --grey-800: #343a40;
     --grey-700: #495057;
+    --grey-650: #76828f;
     --grey-600: #858e96;
     --grey-500: #acb5bd;
     --grey-400: #ced4da;
@@ -48,13 +49,6 @@
     --pink-200: #ff80b3;
     --pink-100: #ffcce0;
     --background: #f5f7fa;
-    --text-mds: 18px;
-    --text-md: 20px;
-    --text-lg: 22px;
-    --text-xl: 24px;
-    --text-normal: 16px;
-    --text-sm: 14px;
-    --text-xs: 13px;
     --box-shadow-md: 0px 0px 5px 0px var(--grey-300);
     --box-shadow-lg: 0px 0px 5px 0px var(--grey-400);
     --padding-xs: 4px;
@@ -67,8 +61,9 @@
     --border-radius-md: 8px;
     --border-radius-lg: 10px;
     --border-radius-2xl: 20px;
+    --border-radius-round: 50%;
     --font-weight-thin: 300;
-    --font-weight-normal: 400;
+    --font-weight-base: 400;
     --font-weight-md: 500;
     --font-weight-lg: 600;
     --font-weight-xl: 700;
@@ -83,11 +78,18 @@
     --margin-2xl: 32px;
     --size-sm: 6px;
     --size-normal: 8px;
-    --size-medium: 10px;
-    --size-large: 12px;
+    --size-md: 10px;
+    --size-lg: 12px;
     --size-xl: 32px;
     --size-2xl: 42px;
     --size-3xl: 62px;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-xs: 12px;
+    --font-size-md: 18px;
+    --font-size-lg: 20px;
+    --font-size-xl: 22px;
+    --font-size-2xl: 24px;
 }
 
 /*********************************************************************************************************/
@@ -251,6 +253,11 @@ a {
     margin-left: var(--margin-sm);
 }
 
+.sub-title {
+    margin-top: var(--size-xl);
+    font-size: var(--font-size-md);
+}
+
 /********************************************* personality *********************************************************/
 
 .section {
@@ -287,8 +294,8 @@ a {
 
 .hero-icon-container {
     position: absolute;
-    top: var(--size-medium);
-    left: var(--size-medium);
+    top: var(--size-md);
+    left: var(--size-md);
     display: flex;
     align-items: center;
 }
@@ -383,7 +390,7 @@ a {
 
 .hierarchy-good-title {
     font-weight: var(--font-weight-lg);
-    font-size: var(--text-lg);
+    font-size: var(--font-size-xl);
 }
 
 .hierarchy-text-good {
@@ -406,18 +413,18 @@ a {
 
 .hierarchy-price-good {
     font-weight: var(--font-weight-lg);
-    font-size: var(--text-mds);
+    font-size: var(--font-size-md);
 }
 
 .hierarchy-text-good-small {
     color: var(--grey-700);
     font-weight: var(--font-weight-thin);
-    font-size: var(--text-sm);
+    font-size: var(--font-size-sm);
 }
 
 .hierarchy-bad {
-    font-weight: var(--font-weight-normal);
-    font-size: var(--text-normal);
+    font-weight: var(--font-weight-base);
+    font-size: var(--font-size-base);
     color: var(--grey-900);
 }
 
@@ -438,8 +445,8 @@ a {
 }
 
 .hierarchy-cta-bad {
-    font-size: var(--text-sm);
-    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-base);
 }
 
 .hierarchy-cta-good {
@@ -462,4 +469,68 @@ a {
     text-decoration: underline;
     color: var(--blue-600);
     margin-left: var(--margin-xs);
+}
+
+/******************************************   Person labels card    *********************************************/
+
+.labels-section-person-card {
+    width: 45%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding: var(--padding-lg);
+    font-family: 'Source Serif Pro', serif;
+    margin-top: var(--size-3xl);
+}
+
+.labels-section-person-card-toggle-container {
+    margin-top: var(--size-xl);
+}
+
+.labels-section-person-card-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: var(--border-radius-round);
+    background-image: url("./julia-roberts.png");
+    background-size: cover;
+}
+
+.labels-section-person-card-content {
+    flex-grow: 1;
+    padding: var(--padding-xl);
+    margin-left: var(--size-md);
+}
+
+.labels-section-person-card-label-container {
+    margin-bottom: var(--size-sm);
+}
+
+.labels-section-person-card-label {
+    font-weight: var(--font-weight-thin);
+    color: var(--blue-600);
+}
+
+.labels-section-person-card-value {
+    font-weight: var(--font-weight-thin);
+    color: var(--grey-650);
+    margin-left: var(--size-sm);
+}
+
+.labels-section-person-card-name-value-good {
+    font-size: var(--font-size-lg);
+    color: var(--blue-600);
+    font-weight: var(--font-weight-base);
+}
+
+.labels-section-person-card-job-title-value-good {
+    color: var(--blue-500);
+    font-weight: var(--font-weight-base);
+}
+
+.labels-section-person-card-email-value-good {
+    font-size: var(--font-size-sm);
+}
+
+.labels-section-person-card-phone-value-good {
+    font-size: var(--font-size-sm);
 }
