@@ -76,6 +76,7 @@
     --margin-lg: 16px;
     --margin-xl: 20px;
     --margin-2xl: 32px;
+    --size-xs: 4px;
     --size-sm: 6px;
     --size-normal: 8px;
     --size-md: 10px;
@@ -258,6 +259,17 @@ a {
     font-size: var(--font-size-md);
 }
 
+.hide {
+    display: none;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.display-block {
+    display: block;
+}
 /********************************************* personality *********************************************************/
 
 .section {
@@ -352,7 +364,6 @@ a {
 .hero-button:hover {
     opacity: 0.8;
 }
-
 
 /******************************************   Hierarchy    *********************************************/
 
@@ -533,4 +544,54 @@ a {
 
 .labels-section-person-card-phone-value-good {
     font-size: var(--font-size-sm);
+}
+
+/******************************************   Product labels card    *********************************************/
+
+.labels-section-product-card {
+    width: 40%;
+    height: 130px;
+    margin-top: var(--size-2xl);
+    display: flex;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.labels-section-product-card-container {
+    margin-top: var(--margin-2xl);
+}
+
+.labels-section-product-card-image {
+    width: 40%;
+    background-image: url("./vase.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.labels-section-product-card-content-container {
+    padding: var(--padding-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.labels-section-product-card-title {
+    color: var(--blue-700);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-lg);
+}
+
+.labels-section-product-card-price {
+    font-weight: var(--font-weight-thin);
+    color: var(--grey-650);
+    margin-top: var(--size-xs);
+}
+
+.labels-section-product-card-stock-container-bad, .labels-section-product-card-stock-container-good {
+    color: var(--green-600);
+}
+
+.labels-section-product-card-stock-amount {
+    font-weight: var(--font-weight-xl);
+    color: var(--green-600);
+    margin-right: var(--size-sm);
 }
