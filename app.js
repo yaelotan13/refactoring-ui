@@ -159,3 +159,34 @@ document.querySelector(".hierarchy-value-right").addEventListener("click", () =>
     document.querySelector(".hierarchy-cta").classList.remove("hierarchy-cta-bad");
     document.querySelector(".hierarchy-cta").classList.add("hierarchy-cta-good");
 });
+
+
+document.querySelector(".labels-person-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".labels-person-value-right").classList.remove("toggle-value-active");
+    document.querySelector(".labels-person-value-left").classList.add("toggle-value-active");
+
+    document.querySelectorAll(".labels-section-person-card-label").forEach(labelElement => {
+        labelElement.style.display = "inline";
+    });
+
+    document.querySelector(".labels-section-person-card-name-value").classList.remove("labels-section-person-card-name-value-good");
+    document.querySelector(".labels-section-person-card-job-title-value").classList.remove("labels-section-person-card-job-title-value-good");
+    document.querySelector(".labels-section-person-card-email-value").classList.remove("labels-section-person-card-email-value-good");
+    document.querySelector(".labels-section-person-card-phone-value").classList.remove("labels-section-person-card-phone-value-good");
+});
+
+document.querySelector(".labels-person-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".labels-person-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".labels-person-value-right").classList.add("toggle-value-active");
+
+    document.querySelectorAll(".labels-section-person-card-label").forEach(labelElement => {
+        labelElement.style.display = "none";
+    });
+
+    document.querySelector(".labels-section-person-card-name-value").classList.add("labels-section-person-card-name-value-good");
+    document.querySelector(".labels-section-person-card-job-title-value").classList.add("labels-section-person-card-job-title-value-good");
+    document.querySelector(".labels-section-person-card-email-value").classList.add("labels-section-person-card-email-value-good");
+    document.querySelector(".labels-section-person-card-phone-value").classList.add("labels-section-person-card-phone-value-good");
+});
