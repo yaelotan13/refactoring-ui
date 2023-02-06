@@ -91,6 +91,7 @@
     --font-size-lg: 20px;
     --font-size-xl: 22px;
     --font-size-2xl: 24px;
+    --font-size-3xl: 32px;
 }
 
 /*********************************************************************************************************/
@@ -492,6 +493,7 @@ a {
     padding: var(--padding-lg);
     font-family: 'Source Serif Pro', serif;
     margin-top: var(--size-3xl);
+    margin-bottom: var(--margin-2xl);
 }
 
 .labels-section-person-card-toggle-container {
@@ -554,6 +556,7 @@ a {
     margin-top: var(--size-2xl);
     display: flex;
     font-family: 'Source Serif Pro', serif;
+    margin-bottom: var(--margin-2xl);
 }
 
 .labels-section-product-card-container {
@@ -594,4 +597,73 @@ a {
     font-weight: var(--font-weight-xl);
     color: var(--green-600);
     margin-right: var(--size-sm);
+}
+
+/******************************************   Dashboard labels card    *********************************************/
+
+.labels-section-dashboard-card {
+    width: 20%;
+    height: 160px;
+    margin-top: var(--size-2xl);
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: var(--margin-2xl);
+    flex-direction: column;
+}
+
+.labels-section-dashboard-card-container {
+    margin-top: var(--size-2xl);
+}
+
+.labels-section-dashboard-card-heart-image {
+    background-image: url("./heart-heart-rate.png");
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    margin-left: var(--margin-lg);
+}
+
+.labels-section-dashboard-card-upper-section-container {
+    display: flex;
+    padding-top: var(--padding-lg);
+    gap: var(--margin-md);
+    align-items: center;
+}
+
+.labels-section-dashboard-card-heart-value-container {
+    color: var(--grey-700);
+    font-weight: var(--font-weight-thin);
+}
+
+.labels-section-dashboard-card-heart-bpm {
+    margin-left: var(--margin-sm);
+}
+
+.labels-section-dashboard-card-heart-bpm-good {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-lg);
+}
+
+.labels-section-dashboard-card-heart-value-good {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-lg);
+    color: var(--grey-900);
+}
+
+.labels-section-dashboard-card-heart-title {
+    font-weight: var(--font-weight-lg);
+}
+
+.labels-section-dashboard-card-heart-title-good {
+    color: var(--grey-650);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-base);
+    letter-spacing: 1px;
+}
+
+.labels-section-dashboard-card-lower-section-container  {
+    background-image: url("./heartbeat.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
 }
