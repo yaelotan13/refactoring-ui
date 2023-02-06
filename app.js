@@ -212,3 +212,31 @@ document.querySelector(".labels-product-value-right").addEventListener("click", 
     document.querySelector(".labels-section-product-card-stock-container-good").classList.remove("hide");
     document.querySelector(".labels-section-product-card-stock-container-good").classList.add("display-inline");
 });
+
+document.querySelector(".labels-dashboard-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".labels-dashboard-value-left").classList.add("toggle-value-active");
+    document.querySelector(".labels-dashboard-value-right").classList.remove("toggle-value-active");
+
+    // title
+    document.querySelector(".labels-section-dashboard-card-heart-title").classList.remove("labels-section-dashboard-card-heart-title-good");
+    document.querySelector(".labels-section-dashboard-card-heart-title").innerHTML = "Heart rate";
+
+    // heart rate value
+    document.querySelector(".labels-section-dashboard-card-heart-bpm").classList.remove("labels-section-dashboard-card-heart-bpm-good");
+    document.querySelector(".labels-section-dashboard-card-heart-value").classList.remove("labels-section-dashboard-card-heart-value-good");
+});
+
+document.querySelector(".labels-dashboard-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".labels-dashboard-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".labels-dashboard-value-right").classList.add("toggle-value-active");
+
+    // title
+    document.querySelector(".labels-section-dashboard-card-heart-title").classList.add("labels-section-dashboard-card-heart-title-good");
+    document.querySelector(".labels-section-dashboard-card-heart-title").innerHTML = "HEART RATE";
+
+    // heart rate value
+    document.querySelector(".labels-section-dashboard-card-heart-bpm").classList.add("labels-section-dashboard-card-heart-bpm-good");
+    document.querySelector(".labels-section-dashboard-card-heart-value").classList.add("labels-section-dashboard-card-heart-value-good");
+});
