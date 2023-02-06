@@ -240,3 +240,63 @@ document.querySelector(".labels-dashboard-value-right").addEventListener("click"
     document.querySelector(".labels-section-dashboard-card-heart-bpm").classList.add("labels-section-dashboard-card-heart-bpm-good");
     document.querySelector(".labels-section-dashboard-card-heart-value").classList.add("labels-section-dashboard-card-heart-value-good");
 });
+
+// resizing the grid spacing example
+const gridSpacingContainer = document.querySelector('.spacing-grid-section');
+document.querySelector(".resizer").addEventListener('mousedown', initDrag, false);
+
+let startX, startY, startWidth, startHeight;
+
+function initDrag(e) {
+    startX = e.clientX;
+    startY = e.clientY;
+    startWidth = parseInt(document.defaultView.getComputedStyle(gridSpacingContainer).width, 10);
+    startHeight = parseInt(document.defaultView.getComputedStyle(gridSpacingContainer).height, 10);
+    document.documentElement.addEventListener('mousemove', doDrag, false);
+    document.documentElement.addEventListener('mouseup', stopDrag, false);
+}
+
+function doDrag(e) {
+    const newWidth = startWidth + e.clientX - startX;
+    const newHeight = startHeight + e.clientY - startY;
+
+    if (newWidth < 950 && newWidth > 550) {
+        gridSpacingContainer.style.width = (startWidth + e.clientX - startX) + 'px';
+    }
+    if (newHeight < 400 && newHeight> 300) {
+        gridSpacingContainer.style.height = (startHeight + e.clientY - startY) + 'px';
+    }
+}
+
+ function stopDrag() {
+     document.documentElement.removeEventListener('mousemove', doDrag, false);
+     document.documentElement.removeEventListener('mouseup', stopDrag, false);
+}
+
+document.querySelector(".spacing-grid-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".spacing-grid-value-right").classList.remove("toggle-value-active");
+    document.querySelector(".spacing-grid-value-left").classList.add("toggle-value-active");
+
+    // hide grid column bar
+    document.querySelectorAll(".spacing-grid-section-grid-column").forEach(column => {
+        column.classList.remove("hide");
+    });
+
+    // side bar
+    document.querySelector(".spacing-grid-section-side-bar").classList.remove("spacing-grid-section-side-bar-fixed");
+});
+
+document.querySelector(".spacing-grid-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".spacing-grid-value-right").classList.add("toggle-value-active");
+    document.querySelector(".spacing-grid-value-left").classList.remove("toggle-value-active");
+
+    // hide grid column bar
+    document.querySelectorAll(".spacing-grid-section-grid-column").forEach(column => {
+        column.classList.add("hide");
+    });
+
+    // side bar
+    document.querySelector(".spacing-grid-section-side-bar").classList.add("spacing-grid-section-side-bar-fixed");
+});
