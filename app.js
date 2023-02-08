@@ -300,3 +300,59 @@ document.querySelector(".spacing-grid-value-right").addEventListener("click", ()
     // side bar
     document.querySelector(".spacing-grid-section-side-bar").classList.add("spacing-grid-section-side-bar-fixed");
 });
+
+document.querySelector(".spacing-white-space-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".spacing-white-space-value-right").classList.remove("toggle-value-active");
+    document.querySelector(".spacing-white-space-value-left").classList.add("toggle-value-active");
+
+    // inner container padding
+    document.querySelector(".spacing-white-space-content-container").classList.remove("spacing-white-space-content-container-space");
+    document.querySelector(".spacing-white-space-content-container").classList.add("spacing-white-space-content-container-dense");
+
+    // stars container margin top
+    document.querySelector(".spacing-white-space-stars-container").classList.remove("spacing-white-space-stars-container-space");
+    document.querySelector(".spacing-white-space-stars-container").classList.add("spacing-white-space-stars-container-dense");
+
+    // star container margin
+    document.querySelectorAll(".spacing-white-space-star-container").forEach(element => {
+        element.classList.remove("spacing-white-space-star-container-space");
+        element.classList.add("spacing-white-space-star-container-dense");
+    });
+
+    // add review content margin
+    document.querySelector(".spacing-white-space-review-content").classList.remove("spacing-white-space-review-content-space");
+    document.querySelector(".spacing-white-space-review-content").classList.add("spacing-white-space-review-content-dense");
+
+    // add review text margin
+    document.querySelector(".spacing-white-space-text").classList.remove("spacing-white-space-text-space");
+    document.querySelector(".spacing-white-space-text").classList.add("spacing-white-space-text-dense");
+});
+
+document.querySelector(".spacing-white-space-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".spacing-white-space-value-right").classList.add("toggle-value-active");
+    document.querySelector(".spacing-white-space-value-left").classList.remove("toggle-value-active");
+
+    // inner container padding
+    document.querySelector(".spacing-white-space-content-container").classList.add("spacing-white-space-content-container-space");
+    document.querySelector(".spacing-white-space-content-container").classList.remove("spacing-white-space-content-container-dense");
+
+    // stars container margin top
+    document.querySelector(".spacing-white-space-stars-container").classList.add("spacing-white-space-stars-container-space");
+    document.querySelector(".spacing-white-space-stars-container").classList.remove("spacing-white-space-stars-container-dense");
+
+    // star container margin
+    document.querySelectorAll(".spacing-white-space-star-container").forEach(element => {
+        element.classList.add("spacing-white-space-star-container-space");
+        element.classList.remove("spacing-white-space-star-container-dense");
+    });
+
+    // add review content margin
+    document.querySelector(".spacing-white-space-review-content").classList.add("spacing-white-space-review-content-space");
+    document.querySelector(".spacing-white-space-review-content").classList.remove("spacing-white-space-review-content-dense");
+
+    // add review text margin
+    document.querySelector(".spacing-white-space-text").classList.add("spacing-white-space-text-space");
+    document.querySelector(".spacing-white-space-text").classList.remove("spacing-white-space-text-dense");
+});
