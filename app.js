@@ -243,20 +243,20 @@ document.querySelector(".labels-dashboard-value-right").addEventListener("click"
 
 // resizing the grid spacing example
 const gridSpacingContainer = document.querySelector('.spacing-grid-section');
-document.querySelector(".resizer").addEventListener('mousedown', initDrag, false);
+document.querySelector(".resizer").addEventListener('mousedown', initDragGridContainer, false);
 
 let startX, startY, startWidth, startHeight;
 
-function initDrag(e) {
+function initDragGridContainer(e) {
     startX = e.clientX;
     startY = e.clientY;
     startWidth = parseInt(document.defaultView.getComputedStyle(gridSpacingContainer).width, 10);
     startHeight = parseInt(document.defaultView.getComputedStyle(gridSpacingContainer).height, 10);
-    document.documentElement.addEventListener('mousemove', doDrag, false);
-    document.documentElement.addEventListener('mouseup', stopDrag, false);
+    document.documentElement.addEventListener('mousemove', doDragGridContainer, false);
+    document.documentElement.addEventListener('mouseup', stopDragGridContainer, false);
 }
 
-function doDrag(e) {
+function doDragGridContainer(e) {
     const newWidth = startWidth + e.clientX - startX;
     const newHeight = startHeight + e.clientY - startY;
 
@@ -268,9 +268,9 @@ function doDrag(e) {
     }
 }
 
- function stopDrag() {
-     document.documentElement.removeEventListener('mousemove', doDrag, false);
-     document.documentElement.removeEventListener('mouseup', stopDrag, false);
+ function stopDragGridContainer() {
+     document.documentElement.removeEventListener('mousemove', doDragGridContainer, false);
+     document.documentElement.removeEventListener('mouseup', stopDragGridContainer, false);
 }
 
 document.querySelector(".spacing-grid-value-left").addEventListener("click", () => {

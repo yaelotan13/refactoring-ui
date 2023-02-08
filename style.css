@@ -925,3 +925,177 @@ a {
     height: 5px;
     border-radius: var(--border-radius-2xl);
 }
+
+/******************************************   Responsive white space   *********************************************/
+
+.responsive-white-space-title {
+    margin-top: var(--margin-2xl);
+}
+
+.responsive-white-space-section {
+    width: 90%;
+    height: 400px;
+    margin-top: var(--margin-9xl);
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+    background-color: white;
+}
+
+.responsive-white-space-top-bar {
+    background-color: var(--background);
+    position: absolute;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.responsive-white-space-logo {
+    width: 30px;
+    height: 30px;
+    background-image: url("./lotus.png");
+    background-size: cover;
+    margin-left: var(--margin-lg);
+}
+
+.responsive-white-space-menu-container {
+    display: flex;
+    gap: var(--size-xl);
+}
+
+.responsive-white-space-sign-up-btn {
+    border: none;
+    background-color: var(--blue-600);
+    padding: var(--padding-sm) var(--padding-md);
+    margin-right: var(--margin-lg);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    color: var(--grey-100);
+}
+
+.responsive-white-space-content-container {
+    padding: var(--padding-xl);
+    width: 100%;
+    margin-top: 40px;
+}
+
+.responsive-white-space-top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.responsive-white-space-top-section-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-thin);
+}
+
+.responsive-white-space-top-section-icons-container {
+    display: flex;
+    align-items: center;
+    gap: var(--size-md);
+}
+
+.responsive-white-space-top-section-search-icon {
+    width: 15px;
+    height: 15px;
+    background-image: url("./search.png");
+    background-size: contain;
+    cursor: pointer;
+}
+
+.responsive-white-space-top-section-search-icon:hover {
+    opacity: 0.7;
+}
+
+.responsive-white-space-top-section-cart-icon {
+    width: 15px;
+    height: 15px;
+    background-image: url("./cart.png");
+    background-size: contain;
+    cursor: pointer;
+}
+
+.responsive-white-space-top-section-cart-icon:hover {
+    opacity: 0.7;
+}
+
+.responsive-white-space-item-container {
+    margin-top: var(--margin-xl);
+}
+
+.responsive-white-space-item-count {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--margin-sm);
+}
+
+.responsive-white-space-hr {
+    height: 1px;
+    background-color: var(--grey-400);
+}
+
+.responsive-white-space-item-info-container, .responsive-white-space-item-desc-container, .responsive-white-space-total-price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: var(--margin-sm) 0;
+}
+
+.responsive-white-space-item-img {
+    width: 70px;
+    height: 70px;
+    background-image: url("./vase.png");
+    background-size: cover;
+    margin-right: var(--margin-lg);
+}
+
+.responsive-white-space-item-title, .responsive-white-space-item-price {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-lg);
+}
+
+.responsive-white-space-item-total-price {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-lg);
+}
+
+.responsive-white-space-item-info {
+    font-weight: var(--font-weight-thin);
+    color: var(--grey-600);
+    font-size: var(--font-size-sm);
+    margin-top: var(--margin-xs);
+}
+
+.responsive-white-space-discount-container {
+    margin: var(--margin-md) 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.responsive-white-space-discount-input {
+    height: 30px;
+    width: 88%;
+    border: 1px solid var(--grey-400);
+    color: var(--grey-500);
+    display: flex;
+    align-items: center;
+    font-weight: var(--font-weight-thin);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-sm);
+    padding-left: var(--padding-md);
+}
+
+.responsive-white-space-discount-btn {
+    background-color: var(--grey-400);
+    padding: var(--padding-sm) var(--padding-lg);
+    border-radius: var(--border-radius-md);
+    border: none;
+    color: white;
+}
+
+.responsive-white-space-hr-space {
+    margin: var(--margin-md) 0;
+}
