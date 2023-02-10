@@ -356,3 +356,31 @@ document.querySelector(".spacing-white-space-value-right").addEventListener("cli
     document.querySelector(".spacing-white-space-text").classList.add("spacing-white-space-text-space");
     document.querySelector(".spacing-white-space-text").classList.remove("spacing-white-space-text-dense");
 });
+
+document.querySelector(".responsive-white-space-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".responsive-white-space-value-left").classList.add("toggle-value-active");
+    document.querySelector(".responsive-white-space-value-right").classList.remove("toggle-value-active");
+
+    // content container padding
+    document.querySelector(".responsive-white-space-content-container").classList.add("responsive-white-space-content-container-full-width");
+    document.querySelector(".responsive-white-space-content-container").classList.remove("responsive-white-space-content-container-smaller-width");
+
+    // input width
+    document.querySelector(".responsive-white-space-discount-input").classList.add("responsive-white-space-discount-input-full-width");
+    document.querySelector(".responsive-white-space-discount-input").classList.remove("responsive-white-space-discount-input-smaller-width");
+});
+
+document.querySelector(".responsive-white-space-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".responsive-white-space-value-right").classList.add("toggle-value-active");
+    document.querySelector(".responsive-white-space-value-left").classList.remove("toggle-value-active");
+
+    // content container padding
+    document.querySelector(".responsive-white-space-content-container").classList.remove("responsive-white-space-content-container-full-width");
+    document.querySelector(".responsive-white-space-content-container").classList.add("responsive-white-space-content-container-smaller-width");
+
+    // input width
+    document.querySelector(".responsive-white-space-discount-input").classList.remove("responsive-white-space-discount-input-full-width");
+    document.querySelector(".responsive-white-space-discount-input").classList.add("responsive-white-space-discount-input-smaller-width");
+});

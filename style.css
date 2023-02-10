@@ -58,6 +58,15 @@
     --padding-md: 12px;
     --padding-lg: 16px;
     --padding-xl: 20px;
+    --padding-2xl: 28px;
+    --padding-3xl: 32px;
+    --padding-4xl: 42px;
+    --padding-5xl: 52px;
+    --padding-6xl: 62px;
+    --padding-7xl: 72px;
+    --padding-8xl: 82px;
+    --padding-9xl: 102px;
+    --padding-10xl: 220px;
     --border-radius-sm: 5px;
     --border-radius-md: 8px;
     --border-radius-lg: 10px;
@@ -678,6 +687,9 @@ a {
 
 /******************************************   Spacing white space   **************************************/
 
+.spacing-white-space-section-outer-container {
+    height: 280px;
+}
 
 .spacing-white-space-section {
     width: 32%;
@@ -934,18 +946,22 @@ a {
 
 .responsive-white-space-section {
     width: 90%;
-    height: 400px;
-    margin-top: var(--margin-9xl);
+    height: 420px;
+    margin-top: var(--margin-6xl);
     font-family: 'Rubik', sans-serif;
     position: relative;
     background-color: white;
+}
+
+.responsive-white-space-toggle-container {
+    margin-top: var(--margin-2xl);
 }
 
 .responsive-white-space-top-bar {
     background-color: var(--background);
     position: absolute;
     top: 0;
-    height: 40px;
+    height: 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -953,16 +969,18 @@ a {
 }
 
 .responsive-white-space-logo {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-image: url("./lotus.png");
     background-size: cover;
     margin-left: var(--margin-lg);
+    margin-bottom: var(--margin-xs);
 }
 
 .responsive-white-space-menu-container {
     display: flex;
     gap: var(--size-xl);
+    font-size: var(--font-size-sm);
 }
 
 .responsive-white-space-sign-up-btn {
@@ -971,14 +989,21 @@ a {
     padding: var(--padding-sm) var(--padding-md);
     margin-right: var(--margin-lg);
     border-radius: var(--border-radius-sm);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     color: var(--grey-100);
 }
 
 .responsive-white-space-content-container {
-    padding: var(--padding-xl);
     width: 100%;
     margin-top: 40px;
+}
+
+.responsive-white-space-content-container-full-width {
+    padding: var(--padding-3xl);
+}
+
+.responsive-white-space-content-container-smaller-width {
+    padding: var(--padding-2xl) var(--padding-10xl);
 }
 
 .responsive-white-space-top-section {
@@ -1077,7 +1102,6 @@ a {
 
 .responsive-white-space-discount-input {
     height: 30px;
-    width: 88%;
     border: 1px solid var(--grey-400);
     color: var(--grey-500);
     display: flex;
@@ -1088,6 +1112,13 @@ a {
     padding-left: var(--padding-md);
 }
 
+.responsive-white-space-discount-input-full-width {
+    width: 88%;
+}
+
+.responsive-white-space-discount-input-smaller-width {
+    width: 75%;
+}
 .responsive-white-space-discount-btn {
     background-color: var(--grey-400);
     padding: var(--padding-sm) var(--padding-lg);
@@ -1098,4 +1129,9 @@ a {
 
 .responsive-white-space-hr-space {
     margin: var(--margin-md) 0;
+}
+
+.responsive-white-space-item-total {
+    color: var(--grey-650);
+    font-weight: var(--font-weight-base);
 }
