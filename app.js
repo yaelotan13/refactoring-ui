@@ -384,3 +384,72 @@ document.querySelector(".responsive-white-space-value-right").addEventListener("
     document.querySelector(".responsive-white-space-discount-input").classList.remove("responsive-white-space-discount-input-full-width");
     document.querySelector(".responsive-white-space-discount-input").classList.add("responsive-white-space-discount-input-smaller-width");
 });
+
+
+document.querySelector(".responsive-columns-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".responsive-columns-value-left").classList.add("toggle-value-active");
+    document.querySelector(".responsive-columns-value-right").classList.remove("toggle-value-active");
+
+    // inner content padding
+    document.querySelector(".responsive-columns-content-container").classList.add("responsive-columns-content-container-one-column");
+    document.querySelector(".responsive-columns-content-container").classList.remove("responsive-columns-content-container-two-columns");
+
+    // inner content num columns
+    document.querySelectorAll(".responsive-columns-inner-container").forEach(element => {
+        element.classList.add("responsive-columns-inner-container-one-column");
+    });
+
+    document.querySelectorAll(".responsive-columns-inner-container").forEach(element => {
+        element.classList.remove("responsive-columns-inner-container-two-columns");
+    });
+
+    // title section width
+    document.querySelectorAll(".responsive-columns-title-section").forEach(element => {
+        element.classList.remove("responsive-columns-title-section-two-columns");
+    });
+
+    // inputs section width
+    document.querySelectorAll(".responsive-columns-inputs-section").forEach(element => {
+        element.classList.remove("responsive-columns-inputs-section-two-columns");
+    });
+
+    // label margin
+    document.querySelectorAll(".responsive-columns-input-label").forEach(element => {
+        element.classList.remove("responsive-columns-input-label-two-columns");
+    });
+});
+
+document.querySelector(".responsive-columns-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".responsive-columns-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".responsive-columns-value-right").classList.add("toggle-value-active");
+
+    // inner content padding
+    document.querySelector(".responsive-columns-content-container").classList.remove("responsive-columns-content-container-one-column");
+    document.querySelector(".responsive-columns-content-container").classList.add("responsive-columns-content-container-two-columns");
+
+    // inner content num columns
+    document.querySelectorAll(".responsive-columns-inner-container").forEach(element => {
+        element.classList.remove("responsive-columns-inner-container-one-column");
+    });
+
+    document.querySelectorAll(".responsive-columns-inner-container").forEach(element => {
+        element.classList.add("responsive-columns-inner-container-two-columns");
+    });
+
+    // title section width
+    document.querySelectorAll(".responsive-columns-title-section").forEach(element => {
+        element.classList.add("responsive-columns-title-section-two-columns");
+    });
+
+    // inputs section width
+    document.querySelectorAll(".responsive-columns-inputs-section").forEach(element => {
+        element.classList.add("responsive-columns-inputs-section-two-columns");
+    });
+
+    // label margin
+    document.querySelectorAll(".responsive-columns-input-label").forEach(element => {
+        element.classList.add("responsive-columns-input-label-two-columns");
+    });
+});
