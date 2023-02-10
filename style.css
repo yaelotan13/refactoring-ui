@@ -65,7 +65,7 @@
     --padding-6xl: 62px;
     --padding-7xl: 72px;
     --padding-8xl: 82px;
-    --padding-9xl: 102px;
+    --padding-9xl: 160px;
     --padding-10xl: 220px;
     --border-radius-sm: 5px;
     --border-radius-md: 8px;
@@ -109,6 +109,8 @@
     --font-size-xl: 22px;
     --font-size-2xl: 24px;
     --font-size-3xl: 32px;
+    --line-height-md: 20px;
+    --line-height-xl: 42px;
 }
 
 /*********************************************************************************************************/
@@ -125,7 +127,7 @@ body {
 }
 
 .notebook-text {
-    line-height: 42px;
+    line-height: var(--line-height-xl);
 }
 
 a {
@@ -1134,4 +1136,173 @@ a {
 .responsive-white-space-item-total {
     color: var(--grey-650);
     font-weight: var(--font-weight-base);
+}
+
+/******************************************   Responsive columns   *********************************************/
+
+.responsive-columns-toggle-container {
+    margin-top: var(--margin-2xl);
+}
+
+.responsive-columns-section {
+    width: 90%;
+    height: 860px;
+    margin-top: var(--margin-6xl);
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+.responsive-columns-top-bar {
+    background-color: white;
+    box-shadow: 0px 9px 14px -10px rgba(122,119,119,0.75);
+}
+
+.responsive-columns-logo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--size-md);
+}
+
+.responsive-columns-logo {
+    background-image: url("./play.png");
+}
+
+.responsive-columns-logo-name {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-md);
+}
+
+.responsive-columns-avatar-container {
+    display: flex;
+    align-items: center;
+    gap: var(--size-lg);
+    padding-right: var(--padding-lg);
+}
+
+.responsive-columns-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius-round);
+    background-size: cover;
+    background-image: url("./elon-musk.png");
+}
+
+.down-arrow {
+    width: 9px;
+    height: 9px;
+    background-size: cover;
+    background-image: url("./down-arrow.png");
+}
+
+.responsive-columns-content-container {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.responsive-columns-content-container-one-column {
+    padding: var(--padding-3xl) var(--padding-9xl);
+}
+
+.responsive-columns-inner-container {
+    display: flex;
+}
+
+.responsive-columns-inner-container-one-column {
+    flex-direction: column;
+}
+
+.responsive-columns-inner-container-two-columns {
+    flex-direction: row;
+}
+
+.responsive-columns-content-container-two-columns {
+    padding: var(--padding-3xl) var(--padding-4xl);
+}
+
+.responsive-columns-title-section-two-columns {
+    width: 40%;
+}
+
+.responsive-columns-inputs-section-two-columns {
+    width: 60%;
+    margin-left: var(--margin-lg);
+}
+
+.responsive-columns-main-title {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--margin-2xl);
+}
+
+.responsive-columns-space-hr {
+    margin-bottom: var(--margin-lg);
+    margin-top: var(--margin-2xl);
+    width: 102%;
+}
+
+.responsive-columns-sub-title-description {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-md);
+    color: var(--grey-600);
+    margin-top: var(--margin-sm);
+    margin-bottom: var(--margin-sm);
+}
+
+.responsive-columns-input-label {
+    margin-bottom: var(--margin-sm);
+    font-size: var(--font-size-sm);
+    color: var(--grey-700);
+    margin-top: var(--margin-xl);
+}
+
+.responsive-columns-input-label-two-columns:first-child {
+    margin-top: 0;
+}
+
+.responsive-columns-input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid var(--grey-500);
+    border-radius: var(--border-radius-md);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: var(--padding-md);
+    color: var(--grey-600);
+    font-weight: var(--font-weight-thin);
+    font-size: var(--font-size-sm);
+    justify-content: space-between;
+}
+
+.responsive-columns-btn {
+    border: 1px solid var(--grey-500);
+    border-radius: var(--border-radius-md);
+    padding: var(--padding-md) var(--padding-lg);
+    width: fit-content;
+    font-size: var(--font-size-sm);
+}
+
+.responsive-columns-input-arrow {
+    width: 8px;
+    height: 6px;
+    margin-right: var(--padding-lg);
+}
+
+.responsive-columns-inputs-container {
+    display: flex;
+    align-items: center;
+    gap: var(--size-lg);
+}
+
+.responsive-columns-input-half-size {
+    width: 48%;
+}
+
+.responsive-columns-input-half-size:last-child {
+    margin-left: var(--margin-xl);
+}
+
+.responsive-columns-textarea {
+    height: 70px;
 }
