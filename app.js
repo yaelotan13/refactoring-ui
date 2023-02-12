@@ -453,3 +453,23 @@ document.querySelector(".responsive-columns-value-right").addEventListener("clic
         element.classList.add("responsive-columns-input-label-two-columns");
     });
 });
+
+document.querySelector(".line-length-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".line-length-value-left").classList.add("toggle-value-active");
+    document.querySelector(".line-length-value-right").classList.remove("toggle-value-active");
+
+    // description width
+    document.querySelector(".line-length-description").classList.add("line-length-description-full");
+    document.querySelector(".line-length-description").classList.remove("line-length-description-not-full");
+});
+
+document.querySelector(".line-length-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".line-length-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".line-length-value-right").classList.add("toggle-value-active");
+
+    // description width
+    document.querySelector(".line-length-description").classList.remove("line-length-description-full");
+    document.querySelector(".line-length-description").classList.add("line-length-description-not-full");
+});
