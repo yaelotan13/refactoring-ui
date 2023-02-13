@@ -1402,3 +1402,52 @@ a {
 .line-length-icon-section-container {
     width: 33%;
 }
+
+/******************************************   Text - center align   *********************************************/
+
+.center-align-section {
+    width: 30%;
+    height: 280px;
+    margin-top: var(--margin-6xl);
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-lg) var(--padding-2xl);
+}
+
+.text-align-left {
+    align-items: left;
+    text-align: left;
+}
+
+.text-align-center {
+    align-items: center;
+    text-align: center;
+}
+
+
+/******************************************   Text - letter spacing *********************************************/
+
+.letter-spacing-decrease {
+    width: 50%;
+    height: 100px;
+    margin-top: var(--margin-6xl);
+    font-size: var(--font-size-2xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: var(--font-weight-md);
+}
+
+.letter-spacing-normal {
+    letter-spacing: normal;
+}
+
+.letter-spacing-smaller {
+    letter-spacing: -1px;
+}
+
+.letter-spacing-wider {
+    letter-spacing: 1.5px;
+}
