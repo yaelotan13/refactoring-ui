@@ -473,3 +473,63 @@ document.querySelector(".line-length-value-right").addEventListener("click", () 
     document.querySelector(".line-length-description").classList.remove("line-length-description-full");
     document.querySelector(".line-length-description").classList.add("line-length-description-not-full");
 });
+
+document.querySelector(".center-align-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".center-align-value-left").classList.add("toggle-value-active");
+    document.querySelector(".center-align-value-right").classList.remove("toggle-value-active");
+
+    // text align
+    document.querySelector(".center-align-section").classList.remove("text-align-left");
+    document.querySelector(".center-align-section").classList.add("text-align-center");
+});
+
+document.querySelector(".center-align-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".center-align-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".center-align-value-right").classList.add("toggle-value-active");
+
+    // text align
+    document.querySelector(".center-align-section").classList.add("text-align-left");
+    document.querySelector(".center-align-section").classList.remove("text-align-center");
+});
+
+document.querySelector(".letter-spacing-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".letter-spacing-value-left").classList.add("toggle-value-active");
+    document.querySelector(".letter-spacing-value-right").classList.remove("toggle-value-active");
+
+    // letter spacing
+    document.querySelector(".letter-spacing-decrease").classList.add("letter-spacing-normal");
+    document.querySelector(".letter-spacing-decrease").classList.remove("letter-spacing-smaller");
+});
+
+document.querySelector(".letter-spacing-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".letter-spacing-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".letter-spacing-value-right").classList.add("toggle-value-active");
+
+    // letter spacing
+    document.querySelector(".letter-spacing-decrease").classList.add("letter-spacing-smaller");
+    document.querySelector(".letter-spacing-decrease").classList.remove("letter-spacing-normal");
+});
+
+document.querySelector(".letter-spacing-increase-value-left").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".letter-spacing-increase-value-left").classList.add("toggle-value-active");
+    document.querySelector(".letter-spacing-increase-value-right").classList.remove("toggle-value-active");
+
+    // letter spacing
+    document.querySelector(".letter-spacing-increase").classList.add("letter-spacing-normal");
+    document.querySelector(".letter-spacing-increase").classList.remove("letter-spacing-wider");
+});
+
+document.querySelector(".letter-spacing-increase-value-right").addEventListener("click", () => {
+    // toggle
+    document.querySelector(".letter-spacing-increase-value-left").classList.remove("toggle-value-active");
+    document.querySelector(".letter-spacing-increase-value-right").classList.add("toggle-value-active");
+
+    // letter spacing
+    document.querySelector(".letter-spacing-increase").classList.add("letter-spacing-wider");
+    document.querySelector(".letter-spacing-increase").classList.remove("letter-spacing-normal");
+});
