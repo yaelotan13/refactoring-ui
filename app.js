@@ -533,3 +533,50 @@ document.querySelector(".letter-spacing-increase-value-right").addEventListener(
     document.querySelector(".letter-spacing-increase").classList.add("letter-spacing-wider");
     document.querySelector(".letter-spacing-increase").classList.remove("letter-spacing-normal");
 });
+
+function handleListItemClicked() {
+    const element = document.getElementById(window.event.target.innerHTML);
+    if (element) {
+        element.scrollIntoView({behavior: 'smooth'}, true);
+    }
+}
+
+function handleListItemToggleChildrenClicked() {
+    const classNameArr = window.event.target.classList.value.split("-");
+    const sectionName = classNameArr[classNameArr.length - 1];
+    const subItems = document.querySelectorAll(`.menu-sub-item-${sectionName}`);
+
+    if (subItems[0].classList.contains("invisible")) {
+        subItems.forEach(subItem => {
+            subItem.classList.remove("invisible");
+            subItem.classList.add("visible");
+        });
+    } else {
+        subItems.forEach(subItem => {
+            subItem.classList.add("invisible");
+            subItem.classList.remove("visible");
+        });
+    }
+}
+
+document.querySelector(".side-menu-title-arrow").addEventListener("click", () => {
+    if (document.querySelector(".side-menu-title-arrow").classList.contains("side-menu-title-arrow-open")) {
+        document.querySelector(".side-menu-title-arrow").classList.remove("side-menu-title-arrow-open");
+        document.querySelector(".side-menu-title-arrow").classList.add("side-menu-title-arrow-close");
+        document.querySelectorAll(".menu-item-container").forEach((element) => {
+            element.classList.remove("invisible");
+            element.classList.add("visible");
+        });
+        document.querySelector(".side-menu-title").classList.add("full-width-menu-title");
+        document.querySelector(".side-menu-title").classList.remove("shorter-menu-title");
+    } else {
+        document.querySelector(".side-menu-title-arrow").classList.add("side-menu-title-arrow-open");
+        document.querySelector(".side-menu-title-arrow").classList.remove("side-menu-title-arrow-close");
+        document.querySelectorAll(".menu-item-container").forEach((element) => {
+            element.classList.remove("visible");
+            element.classList.add("invisible");
+        });
+        document.querySelector(".side-menu-title").classList.add("shorter-menu-title");
+        document.querySelector(".side-menu-title").classList.remove("full-width-menu-title");
+    }
+});
