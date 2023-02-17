@@ -26,6 +26,63 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="side-menu">
+            <ul>
+                <h4 class="side-menu-title">Menu <div class="side-menu-title-arrow side-menu-title-arrow-close"></div></h4>
+                <div class="menu-item-container">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Personality</div>
+                </div>
+                <div class="menu-item-container">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Hierarchy</div>
+                    <div onclick="handleListItemToggleChildrenClicked()" class="menu-item-arrow menu-arrow-hierarchy"></div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-hierarchy">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">No labels</div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-hierarchy">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Labels and text</div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-hierarchy">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Supplementary labels</div>
+                </div>
+                <div class="menu-item-container">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Spacing</div>
+                    <div onclick="handleListItemToggleChildrenClicked()" class="menu-item-arrow menu-arrow-spacing"></div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-spacing">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">White space</div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-spacing">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">When not to use grid</div>
+                </div>
+                <div class="menu-item-container">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Responsive design</div>
+                    <div onclick="handleListItemToggleChildrenClicked()" class="menu-item-arrow menu-arrow-responsibe"></div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-responsibe">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Wide screen</div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-responsibe">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Think in columns</div>
+                </div>
+                <div class="menu-item-container">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Text</div>
+                    <div onclick="handleListItemToggleChildrenClicked()" class="menu-item-arrow menu-arrow-text"></div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-text">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Line length</div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-text">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Center align</div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-text">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Decrease letter spacing</div>
+                </div>
+                <div class="menu-item-container side-menu-sub-item menu-sub-item-text">
+                    <div onclick="handleListItemClicked()" class="side-menu-item">Increase letter spacing</div>
+                </div>
+            </ul>
+        </div>
         <div id="paper">
             <div id="pattern">
                 <h1>Refactoring UI Book Summary</h1>
@@ -33,7 +90,7 @@
                     In each component you can switch between different versions and hover over the tooltips to get more information.
                 </p>
 
-                <h2 class="title">Personality</h2>
+                <h2 class="title" id="Personality">Personality</h2>
                 <p class="notebook-text">Design can have a specific tone of voice with a personality, which should be consistent with the message the product is aiming to convey and the audience it want's to convey it to.</p>
                 <div class="show-info-tooltips-checkbox">
                     <input type="checkbox" class="show-tooltip-checkbox">
@@ -86,7 +143,7 @@
                     </div>
                 </div>
 
-                <h2 class="title">Hierarchy</h2>
+                <h2 class="title" id="Hierarchy">Hierarchy</h2>
                 <p class="notebook-text">Emphasizing important elements and de-emphasizing less important elements would immediately make the design clearer and less noisy, without even changing the design layout, colors, texts or fonts. </p>
                 <div class="toggle position-right">
                     <div class="toggle-value toggle-value-left toggle-value-active hierarchy-value-left">Bad ✖️</div>
@@ -124,7 +181,7 @@
                     </div>
                 </div>
 
-                <h3 class="sub-title">Labels usages</h3>
+                <h3 class="sub-title" id="You may not need labels">You may not need labels</h3>
                 <p class="notebook-text">When presenting data in <i>label: value</i> format, each piece of data receives the same emphasis and it becomes difficult to present any sort of hierarchy.<br>In many cases the labels are not needed since they can imply from the context and format of the data: </p>
                 <div class="toggle position-right labels-section-person-card-toggle-container">
                     <div class="toggle-value toggle-value-left toggle-value-active labels-person-value-left">With labels</div>
@@ -152,6 +209,7 @@
                     </div>
                 </div>
 
+                <h3 class="sub-title" id="Labels and text">Labels can be combined with text</h3>
                 <p class="notebook-text">The label can be combined with the value so it would be easier to meaningfully style each piece of data without sacrificing clarity: </p>
                 <div class="toggle position-right labels-section labels-section-product-card-container">
                     <div class="toggle-value toggle-value-left toggle-value-active labels-product-value-left">With labels</div>
@@ -169,6 +227,7 @@
                     </div>
                 </div>
 
+                <h3 class="sub-title" id="Supplementary labels">Supplementary labels</h3>
                 <p class="notebook-text">In situations where labels are needed (like in dashboards), treat the label as supporting content to the data itself:</p>
                 <div class="toggle position-right labels-section labels-section-dashboard-card-container">
                     <div class="toggle-value toggle-value-left toggle-value-active labels-dashboard-value-left">Same hierarchy</div>
@@ -186,8 +245,8 @@
                     </div>
                 </div>
 
-                <h2 class="title">Spacing</h2>
-                <h3 class="sub-title">White space</h3>
+                <h2 class="title" id="Spacing">Spacing</h2>
+                <h3 class="sub-title" id="White space">White space</h3>
                 <p class="notebook-text">Spacious design always looks cleaner than dense design. To ensure your elements has enough room to breath try giving the elements <i>too much</i> white space
                 and then remove it until the results looks good</p>
                 <div class="toggle position-right labels-section spacing-white-space-section-container">
@@ -244,7 +303,7 @@
                     </div>
                 </div>
 
-                <h3 class="sub-title">Grid are not always the solution</h3>
+                <h3 class="sub-title" id="When not to use grid">When not to use grid</h3>
                 <p class="notebook-text">The 3 columns grid based side nav bar looks good on smaller devices, but not as much on larger ones.
                     <br>Resize the component below using the blue square on the bottom of the component to see the differences.</p>
                 <div class="toggle position-right labels-section spacing-grid-toggle-container">
@@ -303,8 +362,8 @@
                     </div>
                 </div>
 
-                <h2 class="title responsive-white-space-title">Responsive Design</h2>
-                <h3 class="sub-title">You don't have to fit the whole screen</h3>
+                <h2 class="title responsive-white-space-title" id="Responsive design">Responsive Design</h2>
+                <h3 class="sub-title" id="Don't fit the whole screen">You don't have to fit the whole screen</h3>
                 <p class="notebook-text">Just because you have more space to use in desktop devices it doesn't mean you need to use it.
                     <br>Making the interface unnecessary wider makes it harder to interpret, while extra white space around the edges never hurt anyone.
                 </p>
@@ -367,7 +426,7 @@
                     </div>
                 </div>
 
-                <h3 class="sub-title">Think in columns</h3>
+                <h3 class="sub-title" id="Think in columns">Think in columns</h3>
                 <p class="notebook-text">
                     If you’re designing something that works best at a narrower width but feels unbalanced in the context of an otherwise wide UI, see if you can split it into columns instead of just making it wider.
                 </p>
@@ -445,8 +504,8 @@
                     </div>
                 </div>
 
-                <h2 class="title">Text</h2>
-                <h3 class="sub-title">Line Length</h3>
+                <h2 class="title" id="Text">Text</h2>
+                <h3 class="sub-title" id="Line length">Line Length</h3>
                 <p class="notebook-text">
                     When combining text with wider component you should still limit the paragraph width. <br>It might seem counterintuitive at first to use different widths in the same content area, but the result almost always looks more polished.
                 </p>
@@ -485,7 +544,7 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="sub-title">Center Align</h3>
+                <h3 class="sub-title" id="Center align">Center Align</h3>
                 <p class="notebook-text">
                     Longer text looks better when it's left aligned than center aligned.
                 </p>
@@ -503,7 +562,7 @@
                     </div>
                 </div>
 
-                <h3 class="sub-title">Letter Spacing - Decrease Size</h3>
+                <h3 class="sub-title" id="Decrease letter spacing">Letter Spacing - Decrease Size</h3>
                 <p class="notebook-text">
                     Some fonts like Open Sans are designed for small font sizes and have a wider letter-spacing than fonts designed for headlines.
                     <br> If you want to use these fonts for titles it makes sense to decrease their letter spacing.
@@ -516,7 +575,7 @@
                     Team Communication Made Easy
                 </div>
 
-                <h3 class="sub-title">Letter Spacing - Increase Size</h3>
+                <h3 class="sub-title" id="Increase letter spacing">Letter Spacing - Increase Size</h3>
                 <p class="notebook-text">
                     Since every capital letter has the same typeface’s x-height, using the default letter spacing ofter leads to text that is harder to read because there are fewer distinguishing characteristics between letters.
                 </p>

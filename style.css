@@ -144,6 +144,98 @@ a {
     border-radius: var(--border-radius-md);
 }
 
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none !important;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.non-hidden {
+    visibility: visible;
+}
+
+.side-menu {
+    padding: var(--padding-2xl);
+    width: fit-content;
+    position: fixed;
+    left: var(--size-md);
+}
+
+.side-menu-title {
+    border-bottom: 1px solid var(--grey-300);
+    padding-bottom: var(--padding-sm);
+    padding-left: var(--padding-sm);
+    padding-right: var(--padding-sm);
+    margin-bottom: var(--margin-xs);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+}
+
+.shorter-menu-title {
+    width: 60px;
+}
+
+.full-width-menu-title {
+    width: 180px;
+}
+
+.menu-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey-300);
+    padding-bottom: var(--padding-sm);
+    padding-left: var(--padding-sm);
+    padding-right: var(--padding-sm);
+    margin-bottom: var(--margin-xs);
+    width: 180px;
+}
+
+.side-menu-title-arrow {
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.side-menu-title-arrow-open {
+    background-image: url("./double-right-arrow.png");
+}
+
+.side-menu-title-arrow-close {
+    background-image: url("./double-left-arrow.png");
+}
+
+.side-menu-item {
+    cursor: pointer;
+    margin-bottom: var(--margin-xs);
+    font-size: var(--font-size-sm);
+}
+
+.side-menu-item:hover {
+    color: var(--blue-500);
+}
+
+.side-menu-sub-item {
+    padding-left: var(--padding-md);
+}
+
+.menu-item-arrow {
+    background-image: url("./down-chevron.png");
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    cursor: pointer;
+}
+
 #paper {
     width: 1000px;
     height: 100vh;
